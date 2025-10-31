@@ -34,6 +34,8 @@ export interface RawFlight {
 export interface FlightSummary {
     id: string;
     aeronave: string; // Simplificado de aircraft.name
+    companhia: string; // Simplificado de aircraft.airline
+    registro: string; // Simplificado de aircraft.registration
     rota: string;     // Criado a partir de flightData.route 
     saldo: number;    // Simplificado de flightData.balance
     data: string;     // Simplificado de flightData.date
