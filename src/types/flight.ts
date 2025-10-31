@@ -36,7 +36,8 @@ export interface FlightSummary {
     aeronave: string; // Simplificado de aircraft.name
     companhia: string; // Simplificado de aircraft.airline
     registro: string; // Simplificado de aircraft.registration
-    rota: string;     // Criado a partir de flightData.route 
+    origem: string;   // Simplificado de flightData.route.from
+    destino: string;  // Simplificado de flightData.route.to
     saldo: number;    // Simplificado de flightData.balance
     data: string;     // Simplificado de flightData.date
 }

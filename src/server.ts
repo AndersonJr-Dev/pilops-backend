@@ -21,7 +21,8 @@ const transformToSummary = (flight: RawFlight): FlightSummary => {
         aeronave: flight.aircraft.name,
         companhia: flight.aircraft.airline,
         registro: flight.aircraft.registration,
-        rota: `${flight.flightData.route.from} -> ${flight.flightData.route.to}`, // Templates literals para juntar as strings
+        origem: flight.flightData.route.from,
+        destino: flight.flightData.route.to,
         saldo: flight.flightData.balance,
         data: flight.flightData.date,
     };
