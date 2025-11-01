@@ -7,8 +7,13 @@ import type { RawFlight, FlightSummary, FlightDetails } from './types/flight.js'
 const app = express();
 
 // Configuração do CORS para permitir requisições do frontend na Vercel
+const allowedOrigins = [
+    "https://pilops-frontend.vercel.app",
+    "http://localhost:5173",
+];
+
 app.use(cors({
-  origin: 'https://pilops-frontend.vercel.app',
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
