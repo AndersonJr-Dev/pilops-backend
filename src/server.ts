@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 3001; // Porta onde a API irá rodar
+const PORT = process.env.PORT || 3001; // Porta onde a API irá rodar
 
 // Carregamento de todos os voos na memória
 const allFlights: RawFlight[] = db.flights;
