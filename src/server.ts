@@ -6,7 +6,15 @@ import type { RawFlight, FlightSummary, FlightDetails } from './types/flight.js'
 // Inicializa o aplicativo Express
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+    "https://pilops-frontend.vercel.app/",
+    "http://localhost:5173",
+];
+
+app.use(cors({
+    origin: allowedOrigins,
+    methods: ["GET", "OPTIONS"],
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001; // Porta onde a API irá rodar
