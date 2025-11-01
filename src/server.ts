@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import db from './data/db.json'; // Importa os dados do arquivo JSON
-import { RawFlight, FlightSummary, FlightDetails } from './types/flight'; // Importa os moldes de tipos
+import db from './data/db.json' with { type: 'json' }; // Importa os dados do arquivo JSON
+import type { RawFlight, FlightSummary, FlightDetails } from './types/flight.js';
 
 // Inicializa o aplicativo Express
 const app = express();
